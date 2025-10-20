@@ -40,12 +40,14 @@ body::before {
 }
 
 .profile-img {
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255,255,255,0.6);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  width: 140px;              /* tamaño fijo */
+  aspect-ratio: 1 / 1;       /* asegura que siempre sea cuadrada */
+  border-radius: 50%;        /* la hace redonda */
+  object-fit: cover;         /* recorta sin deformar */
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  margin-bottom: 15px;
+  display: block;            /* evita que se estire en flex */
 }
 
 .title {
