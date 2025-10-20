@@ -4,14 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mis Redes | xmnax.l</title>
-  <style>
-    /* ... (todo el CSS se mantiene igual que tu versión original) ... */
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- FOTO DE PERFIL -->
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZslK932j5O8Ja1xPrn7ZgBBPljHYdfj8Fvbecd_cwxdyamI0GwPd-Aws&s=10" alt="Foto de perfil" class="profile-img" />
+  <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="profile-img" />
 
   <!-- TÍTULO PRINCIPAL -->
   <h1>Conecta conmigo 🌐</h1>
@@ -26,14 +24,17 @@
       <a class="btn" href="https://www.snapchat.com/add/sofi.agy?share_id=y3PTBlWHvEk&locale=es-ES" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Snapchat" /> Snapchat
       </a>
+      <a class="btn" href="https://www.facebook.com/share/1AsGDi4Eq6/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" /> Facebook
+      </a>
     </div>
   </section>
 
-  <!-- SECCIÓN PERFIL DE JUEGOS (puedes eliminarla si no aplica) -->
+  <!-- SECCIÓN PERFIL DE JUEGOS -->
   <section class="juegos">
     <h2>Perfil de Juegos 🎮</h2>
     <div class="social-links">
-      <!-- Puedes agregar sus juegos aquí cuando los tengas -->
+      <!-- Aquí puedes agregar juegos más adelante -->
     </div>
   </section>
 
@@ -48,15 +49,15 @@
   <!-- PANEL INTERNO ACERCA DE MÍ -->
   <div class="acerca-panel" id="acercaPanel">
     <h2>Acerca de mí 😸💭</h2>
-    <p><strong>😄Gustos:</strong></p>
-    <p>Me encantan los 🎮videojuegos, sobre todo cuando los juego con amigos</p>
-    <p>Me encanta la 🏞️naturaleza</p>
-    <p>Me gustan los 🐱gatos tanto como los 🐶perros</p>
-    <p><strong>⭐Favoritos:</strong></p>
-    <p>Color🔵azul y 🟣lila</p>
+    <p><strong>😄 Gustos:</strong></p>
+    <p>Me encantan los 🎮 videojuegos, sobre todo cuando los juego con amigos</p>
+    <p>Me encanta la 🏞️ naturaleza</p>
+    <p>Me gustan los 🐱 gatos tanto como los 🐶 perros</p>
+    <p><strong>⭐ Favoritos:</strong></p>
+    <p>Color 🔵 azul y 🟣 lila</p>
     <p>En comida los ravioles y ñoquis</p>
-    <p>Las flores de color 💮blancas</p>
-    <p><strong>😣Disgustos:</strong></p>
+    <p>Las flores de color 💮 blancas</p>
+    <p><strong>😣 Disgustos:</strong></p>
     <p>Jskksks no les diré mis debilidades para que lo usen en mi contra XD</p>
     <button class="volver-btn" id="volverAcerca">⬅ Volver</button>
   </div>
@@ -65,13 +66,13 @@
   <footer>© 2025 xmnax.l</footer>
 
   <script>
-    /* Fondo personalizado */
+    // Fondo
     const fondoURL = 'https://wallpapers-clan.com/wp-content/uploads/2023/10/halloween-spooky-house-jack-o-lantern-wallpaper-scaled.jpg';
-    document.body.style.background = `linear-gradient(135deg, rgba(30,30,47,0.3), rgba(42,42,64,0.3)), url(${fondoURL})`;
+    document.body.style.background = `linear-gradient(135deg, rgba(30,30,47,0.6), rgba(42,42,64,0.6)), url(${fondoURL})`;
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundPosition = 'center';
 
-    /* Panel Acerca de mí */
+    // Panel Acerca de mí
     const btnAcerca = document.getElementById('verAcerca');
     const panelAcerca = document.getElementById('acercaPanel');
     const btnVolver = document.getElementById('volverAcerca');
