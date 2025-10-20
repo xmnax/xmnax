@@ -1,105 +1,103 @@
-/* ESTILO GENERAL */
-body {
-  font-family: "Poppins", sans-serif;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  margin: 0;
-  padding: 40px 20px 80px 20px;
-
-  /* Fondo de respaldo oscuro */
-  background-color: #1e1e2f;
-
-  /* Fondo con imagen */
-  background-image: linear-gradient(135deg, rgba(30,30,47,0.6), rgba(42,42,64,0.6)),
-                    url("https://wallpapers-clan.com/wp-content/uploads/2023/10/witchy-anime-girl-with-pumpkins-halloween-wallpaper.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mis Redes | xmnax.l</title>
-  <!-- Enlace correcto al CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="container">
+    <!-- Header -->
+    <header class="header">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZslK932j5O8Ja1xPrn7ZgBBPljHYdfj8Fvbecd_cwxdyamI0GwPd-Aws&s=10"
+        alt="Profile photo"
+        class="profile-img"
+      />
+      <h1 class="title">Follow me on my networks to see more 🌐</h1>
+    </header>
 
-  <!-- FOTO DE PERFIL -->
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZslK932j5O8Ja1xPrn7ZgBBPljHYdfj8Fvbecd_cwxdyamI0GwPd-Aws&s=10" 
-       alt="Foto de perfil" class="profile-img" />
+    <!-- Redes -->
+    <section class="card">
+      <h2 class="card-title">Redes Sociales</h2>
+      <div class="links">
+        <a class="btn" href="https://www.instagram.com/xmnax.l/" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram icon" class="icon" />
+          <span>Instagram</span>
+        </a>
+        <a class="btn" href="https://www.snapchat.com/add/sofi.agy?share_id=y3PTBlWHvEk&locale=es-ES" target="_blank" rel="noopener">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0XQLq6x5Ljhzp9Ps9MLeahdOayJX9BZXF1illDq0BMfjcSoEClmsHB6O4&s=10" alt="Snapchat icon" class="icon" />
+          <span>Snapchat</span>
+        </a>
+        <a class="btn" href="https://www.facebook.com/share/1AsGDi4Eq6/" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook icon" class="icon" />
+          <span>Facebook</span>
+        </a>
+      </div>
+    </section>
 
-  <!-- TÍTULO PRINCIPAL -->
-  <h1>Follow me on my networks to see more 🌐</h1>
+    <!-- Perfil de juegos (vacío por ahora) -->
+    <section class="card">
+      <h2 class="card-title">Perfil de Juegos 🎮</h2>
+      <div class="links">
+        <!-- Agrega tus juegos aquí si lo deseas -->
+      </div>
+    </section>
 
-  <!-- SECCIÓN DE REDES -->
-  <section class="redes">
-    <h2>Redes Sociales</h2>
-    <div class="social-links">
-      <a class="btn" href="https://www.instagram.com/xmnax.l/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /> Instagram
-      </a>
-      <a class="btn" href="https://www.snapchat.com/add/sofi.agy?share_id=y3PTBlWHvEk&locale=es-ES" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/1322/1322096.png" alt="Snapchat" /> Snapchat
-      </a>
-      <a class="btn" href="https://www.facebook.com/share/1AsGDi4Eq6/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" /> Facebook
-      </a>
+    <!-- Acerca de mí -->
+    <section class="card">
+      <h2 class="card-title">Acerca de mí 😸💭</h2>
+      <p class="muted">Soy una chica creativa que ama el cosplay y el maquillaje.</p>
+      <div class="links">
+        <button class="btn" id="openAbout">
+          <span>Ver más</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Panel “Acerca de mí” -->
+  <div class="about-panel" id="aboutPanel" aria-hidden="true">
+    <div class="about-content">
+      <h3>Acerca de mí</h3>
+      <p>Soy una chica creativa que ama el cosplay y el maquillaje. Me encanta expresarme a través de personajes y estilos únicos.</p>
+      <button class="close-btn" id="closeAbout">Cerrar</button>
     </div>
-  </section>
-
-  <!-- SECCIÓN PERFIL DE JUEGOS -->
-  <section class="juegos">
-    <h2>Perfil de Juegos 🎮</h2>
-    <div class="social-links">
-      <!-- Aquí puedes agregar juegos más adelante -->
-    </div>
-  </section>
-
-  <!-- SECCIÓN ACERCA DE MÍ -->
-  <section class="acerca">
-    <h2>Acerca de mí 😸💭</h2>
-    <div class="social-links">
-      <button class="btn" id="verAcerca">Ver más</button>
-    </div>
-  </section>
-
-  <!-- PANEL INTERNO ACERCA DE MÍ -->
-  <div class="acerca-panel" id="acercaPanel">
-    <h2>Acerca de mí 😸💭</h2>
-    
-    <p><strong>✨ Quién soy:</strong></p>
-    <p>Soy una chica creativa que ama el <strong>cosplay</strong> y el <strong>maquillaje</strong>. Me encanta expresarme a través de personajes y estilos únicos.</p>
-    
-    <p><strong>😄 Gustos:</strong></p>
-    <p>Disfruto mucho de los videojuegos 🎮, la moda alternativa y todo lo que me permita mostrar mi lado artístico.</p>
-    
-    <p><strong>😣 Disgustos:</strong></p>
-    <p>No me gusta la rutina aburrida ni la falta de creatividad. Prefiero siempre estar inventando algo nuevo.</p>
-    
-    <button class="volver-btn" id="volverAcerca">⬅ Volver</button>
   </div>
 
-  <!-- PIE DE PÁGINA -->
-  <footer>© 2025 xmnax.l</footer>
+  <footer class="footer">© 2025 xmnax.l</footer>
 
   <script>
-    // Panel Acerca de mí
-    const btnAcerca = document.getElementById('verAcerca');
-    const panelAcerca = document.getElementById('acercaPanel');
-    const btnVolver = document.getElementById('volverAcerca');
+    // Abrir/Cerrar panel Acerca de mí (JS mínimo y robusto)
+    const openBtn = document.getElementById('openAbout');
+    const panel = document.getElementById('aboutPanel');
+    const closeBtn = document.getElementById('closeAbout');
 
-    btnAcerca.addEventListener('click', () => {
-      panelAcerca.classList.add('active');
+    openBtn.addEventListener('click', () => {
+      panel.classList.add('visible');
+      panel.setAttribute('aria-hidden', 'false');
     });
 
-    btnVolver.addEventListener('click', () => {
-      panelAcerca.classList.remove('active');
+    closeBtn.addEventListener('click', () => {
+      panel.classList.remove('visible');
+      panel.setAttribute('aria-hidden', 'true');
+    });
+
+    // Cerrar con click fuera del contenido
+    panel.addEventListener('click', (e) => {
+      if (e.target === panel) {
+        panel.classList.remove('visible');
+        panel.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+    // Cerrar con Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && panel.classList.contains('visible')) {
+        panel.classList.remove('visible');
+        panel.setAttribute('aria-hidden', 'true');
+      }
     });
   </script>
 </body>
