@@ -139,3 +139,49 @@ section {
   color: white;
   font-size: 0.95rem;
   cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn img {
+  width: 22px;
+  height: 22px;
+}
+
+/* EFECTOS HOVER DIFERENCIADOS */
+.redes .btn:hover {
+  background: linear-gradient(135deg, #ff9500, #ff6f00);
+  box-shadow: 0 0 10px rgba(255, 150, 0, 0.6);
+  transform: scale(1.07);
+}
+
+.juegos .btn:hover {
+  background: linear-gradient(135deg, #2196f3, #00bcd4);
+  box-shadow: 0 0 10px rgba(0, 150, 255, 0.6);
+  transform: scale(1.07);
+}
+
+.acerca .btn:hover {
+  background: linear-gradient(135deg, #b366ff, #7a00ff);
+  box-shadow: 0 0 10px rgba(166, 108, 255, 0.6);
+  transform: scale(1.07);
+}
+
+/* FOOTER */
+footer {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: #aaa;
+  text-align: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
