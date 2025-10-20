@@ -9,6 +9,13 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 40px 20px 80px 20px;
+
+  /* Fondo nuevo */
+  background: linear-gradient(135deg, rgba(30,30,47,0.6), rgba(42,42,64,0.6)),
+              url("https://wallpapers-clan.com/wp-content/uploads/2023/10/witchy-anime-girl-with-pumpkins-halloween-wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* FOTO DE PERFIL */
@@ -126,52 +133,3 @@ section {
   border: none;
   border-radius: 12px;
   padding: 8px 16px;
-  color: white;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.redes .btn:hover {
-  background: linear-gradient(135deg, #ff9500, #ff6f00);
-  box-shadow: 0 0 10px rgba(255, 150, 0, 0.6);
-  transform: scale(1.07);
-}
-
-.juegos .btn:hover {
-  background: linear-gradient(135deg, #2196f3, #00bcd4);
-  box-shadow: 0 0 10px rgba(0, 150, 255, 0.6);
-  transform: scale(1.07);
-}
-
-.acerca .btn:hover {
-  background: linear-gradient(135deg, #b366ff, #7a00ff);
-  box-shadow: 0 0 10px rgba(166, 108, 255, 0.6);
-  transform: scale(1.07);
-}
-
-/* ICONOS */
-.btn img {
-  width: 22px;
-  height: 22px;
-}
-
-/* FOOTER */
-footer {
-  margin-top: 30px;
-  font-size: 0.8rem;
-  color: #aaa;
-  text-align: center;
-}
-
-/* RESPONSIVO */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
