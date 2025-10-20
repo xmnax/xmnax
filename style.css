@@ -1,19 +1,30 @@
-/* Reset básico y tema */
-* { box-sizing: border-box; }
-html, body { height: 100%; }
-body {
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* ESTILO GENERAL */
+body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: #f7f7fb;
-  background-color: #151621; /* Fallback oscuro bonito */
-  /* Si la imagen carga, se aplicará debajo del overlay */
+  background-color: #151621; /* Fallback oscuro */
   background-image: url("https://wallpapers-clan.com/wp-content/uploads/2023/10/witchy-anime-girl-with-pumpkins-halloween-wallpaper.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 80px 20px;
 }
 
-/* Overlay para legibilidad (funciona incluso si el fondo no carga) */
+/* Overlay para legibilidad */
 body::before {
   content: "";
   position: fixed;
@@ -23,15 +34,15 @@ body::before {
   z-index: 0;
 }
 
-/* Layout */
+/* CONTENEDOR PRINCIPAL */
 .container {
   max-width: 720px;
-  margin: 0 auto;
-  padding: 24px 16px 80px;
+  width: 100%;
   position: relative;
   z-index: 1;
 }
 
+/* HEADER */
 .header {
   display: flex;
   align-items: center;
@@ -40,23 +51,21 @@ body::before {
 }
 
 .profile-img {
-  width: 140px;              /* tamaño fijo */
-  aspect-ratio: 1 / 1;       /* asegura que siempre sea cuadrada */
-  border-radius: 50%;        /* la hace redonda */
-  object-fit: cover;         /* recorta sin deformar */
+  width: 120px;
+  aspect-ratio: 1 / 1;   /* asegura proporción cuadrada */
+  border-radius: 50%;    /* círculo perfecto */
+  object-fit: cover;     /* recorta sin deformar */
   border: 3px solid #fff;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  margin-bottom: 15px;
-  display: block;            /* evita que se estire en flex */
+  display: block;
 }
 
 .title {
   font-size: 1.4rem;
   line-height: 1.3;
-  margin: 0;
 }
 
-/* Cards */
+/* CARDS */
 .card {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -69,18 +78,18 @@ body::before {
 
 .card-title {
   font-size: 1.05rem;
-  margin: 0 0 12px 0;
+  margin-bottom: 12px;
   padding-bottom: 6px;
   border-bottom: 1px dashed rgba(255,255,255,0.15);
 }
 
 .muted {
   color: #cfd2ff;
-  margin: 0 0 10px 0;
   font-size: 0.95rem;
+  margin-bottom: 10px;
 }
 
-/* Links y botones */
+/* LINKS Y BOTONES */
 .links {
   display: grid;
   grid-template-columns: 1fr;
@@ -116,7 +125,7 @@ body::before {
   object-fit: cover;
 }
 
-/* Panel Acerca de mí */
+/* PANEL ACERCA DE MÍ */
 .about-panel {
   position: fixed;
   inset: 0;
@@ -129,7 +138,9 @@ body::before {
   z-index: 10;
 }
 
-.about-panel.visible { display: flex; }
+.about-panel.visible {
+  display: flex;
+}
 
 .about-content {
   width: min(640px, 92vw);
@@ -142,17 +153,16 @@ body::before {
 }
 
 .about-content h3 {
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   font-size: 1.2rem;
 }
 
 .about-content p {
-  margin: 0 0 14px 0;
+  margin-bottom: 14px;
   color: #e6e8ff;
 }
 
 .close-btn {
-  display: inline-block;
   padding: 10px 14px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.18);
@@ -168,7 +178,7 @@ body::before {
   transform: translateY(-1px);
 }
 
-/* Footer */
+/* FOOTER */
 .footer {
   position: relative;
   z-index: 1;
@@ -178,7 +188,7 @@ body::before {
   font-size: 0.86rem;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (min-width: 560px) {
   .links {
     grid-template-columns: 1fr 1fr;
