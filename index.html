@@ -19,123 +19,88 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Redes | xmnax.l</title>
+  <!-- Enlace correcto al CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-/* FOTO DE PERFIL */
-.profile-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #fff;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-  margin-bottom: 15px;
-}
+  <!-- FOTO DE PERFIL -->
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZslK932j5O8Ja1xPrn7ZgBBPljHYdfj8Fvbecd_cwxdyamI0GwPd-Aws&s=10" 
+       alt="Foto de perfil" class="profile-img" />
 
-/* TÍTULOS */
-h1 {
-  margin: 0 0 30px 0;
-  font-size: 1.8rem;
-  text-align: center;
-}
+  <!-- TÍTULO PRINCIPAL -->
+  <h1>Follow me on my networks to see more 🌐</h1>
 
-h2 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding-bottom: 5px;
-}
+  <!-- SECCIÓN DE REDES -->
+  <section class="redes">
+    <h2>Redes Sociales</h2>
+    <div class="social-links">
+      <a class="btn" href="https://www.instagram.com/xmnax.l/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /> Instagram
+      </a>
+      <a class="btn" href="https://www.snapchat.com/add/sofi.agy?share_id=y3PTBlWHvEk&locale=es-ES" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1322/1322096.png" alt="Snapchat" /> Snapchat
+      </a>
+      <a class="btn" href="https://www.facebook.com/share/1AsGDi4Eq6/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook" /> Facebook
+      </a>
+    </div>
+  </section>
 
-/* SECCIONES */
-section {
-  margin-bottom: 30px;
-  width: 100%;
-  max-width: 380px;
-  padding: 20px;
-  border-radius: 15px;
-}
+  <!-- SECCIÓN PERFIL DE JUEGOS -->
+  <section class="juegos">
+    <h2>Perfil de Juegos 🎮</h2>
+    <div class="social-links">
+      <!-- Aquí puedes agregar juegos más adelante -->
+    </div>
+  </section>
 
-/* REDES */
-.redes {
-  background: rgba(255, 140, 0, 0.08);
-  box-shadow: 0 0 15px rgba(255, 140, 0, 0.15);
-  border: 1px solid rgba(255, 160, 60, 0.2);
-}
+  <!-- SECCIÓN ACERCA DE MÍ -->
+  <section class="acerca">
+    <h2>Acerca de mí 😸💭</h2>
+    <div class="social-links">
+      <button class="btn" id="verAcerca">Ver más</button>
+    </div>
+  </section>
 
-/* JUEGOS */
-.juegos {
-  background: rgba(0, 150, 255, 0.1);
-  box-shadow: 0 0 15px rgba(0, 150, 255, 0.15);
-  border: 1px solid rgba(0, 150, 255, 0.2);
-}
+  <!-- PANEL INTERNO ACERCA DE MÍ -->
+  <div class="acerca-panel" id="acercaPanel">
+    <h2>Acerca de mí 😸💭</h2>
+    
+    <p><strong>✨ Quién soy:</strong></p>
+    <p>Soy una chica creativa que ama el <strong>cosplay</strong> y el <strong>maquillaje</strong>. Me encanta expresarme a través de personajes y estilos únicos.</p>
+    
+    <p><strong>😄 Gustos:</strong></p>
+    <p>Disfruto mucho de los videojuegos 🎮, la moda alternativa y todo lo que me permita mostrar mi lado artístico.</p>
+    
+    <p><strong>😣 Disgustos:</strong></p>
+    <p>No me gusta la rutina aburrida ni la falta de creatividad. Prefiero siempre estar inventando algo nuevo.</p>
+    
+    <button class="volver-btn" id="volverAcerca">⬅ Volver</button>
+  </div>
 
-/* ACERCA */
-.acerca {
-  background: rgba(166, 108, 255, 0.15);
-  box-shadow: 0 0 15px rgba(166, 108, 255, 0.15);
-  border: 1px solid rgba(200, 160, 255, 0.3);
-}
+  <!-- PIE DE PÁGINA -->
+  <footer>© 2025 xmnax.l</footer>
 
-/* PANEL ACERCA */
-.acerca-panel {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.9);
-  backdrop-filter: blur(5px);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-  transition: all 0.4s ease;
-}
+  <script>
+    // Panel Acerca de mí
+    const btnAcerca = document.getElementById('verAcerca');
+    const panelAcerca = document.getElementById('acercaPanel');
+    const btnVolver = document.getElementById('volverAcerca');
 
-.acerca-panel.active {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: all;
-}
+    btnAcerca.addEventListener('click', () => {
+      panelAcerca.classList.add('active');
+    });
 
-.volver-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 12px;
-  border: none;
-  background: rgba(255,255,255,0.1);
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.volver-btn:hover {
-  background: rgba(255,255,255,0.25);
-  transform: scale(1.05);
-}
-
-/* BOTONES */
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-
-.btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  border-radius: 12px;
-  padding: 8px 16px;
-  color: white;
-  font-size: 0.95rem;
-  cursor: pointer;
+    btnVolver.addEventListener('click', () => {
+      panelAcerca.classList.remove('active');
+    });
+  </script>
+</body>
+</html>
